@@ -38,8 +38,7 @@ jobs:
     - name: Instal pycurl on Windows
       if: ${{ startsWith(matrix.os, 'windows') && matrix.python == '3.10'}}
       run: |
-        wget "https://github.com/lorien/pycurl_packages/raw/main/pycurl-7.44.1-cp310-cp310-win_amd64.whl" -O /tmp/pycurl-310.whl
-        pip install /tmp/pycurl-310.whl
+        pip install "https://github.com/lorien/pycurl_packages/raw/main/pycurl-7.44.1-cp310-cp310-win_amd64.whl"
 
     - name: Install dependencies
       run: |
