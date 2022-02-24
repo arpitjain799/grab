@@ -7,10 +7,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        #os: [ubuntu-latest, windows-latest, macos-latest]
-        #python: ['3.7', '3.8', '3.9', '3.10']
-        os: [windows-latest]
-        python: ['3.10']
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.7', '3.8', '3.9', '3.10']
     steps:
 
     - uses: actions/checkout@v2
@@ -34,11 +32,6 @@ jobs:
       if: ${{ startsWith(matrix.os, 'macos') }}
       run: |
         PYCURL_SSL_LIBRARY=openssl LDFLAGS="-L/usr/local/opt/openssl/lib" CPPFLAGS="-I/usr/local/opt/openssl/include" pip install -U --no-cache-dir pycurl
-
-    - name: Instal pycurl on Windows
-      if: ${{ startsWith(matrix.os, 'windows') && matrix.python == '3.10'}}
-      run: |
-        pip install "https://github.com/lorien/pycurl_packages/raw/main/pycurl-7.44.1-cp310-cp310-win_amd64.whl"
 
     - name: Install dependencies
       run: |
