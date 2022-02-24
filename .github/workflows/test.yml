@@ -29,11 +29,11 @@ jobs:
       if: ${{ startsWith(matrix.os, 'macos') }}
       run: |
         brew install openssl
-        brew link --force openssl
 
     - name: Install dependencies
       run: |
         python -m pip install -U pip
+        PYCURL_SSL_LIBRARY=openssl LDFLAGS="-L/usr/local/opt/openssl/lib" CPPFLAGS="-I/usr/local/opt/openssl/include" pip install -U --no-cache-dir pycurl
         pip install -U -r requirements_dev.txt
         pip install -U -e .
 
