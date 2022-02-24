@@ -28,7 +28,8 @@ jobs:
     - name: Install MacOS build dependencies
       if: ${{ startsWith(matrix.os, 'macos') }}
       run: |
-        brew install openssl # link --force
+        brew install openssl
+        brew link --force openssl
 
     - name: Install dependencies
       run: |
