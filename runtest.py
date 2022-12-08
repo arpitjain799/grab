@@ -14,66 +14,66 @@ from tests.util import GLOBAL
 # FIXME:
 # * Test redirect and response.url after redirect
 GRAB_TEST_LIST = (
-    # *** Internal API
-    "tests.grab_api",
-    "tests.grab_transport",
-    "tests.response_class",
-    "tests.grab_debug",
-    # *** Response processing
-    "tests.grab_xml_processing",
+    ## *** Internal API
+    # "tests.grab_api",
+    # "tests.grab_transport",
+    # "tests.response_class",
+    # "tests.grab_debug",
+    ## *** Response processing
+    # "tests.grab_xml_processing",
     "tests.grab_response_body_processing",
-    "tests.grab_charset",
-    "tests.grab_redirect",
-    "tests.grab_defusedxml",
-    "tests.grab_document",
-    # *** Network
-    "tests.grab_get_request",
-    "tests.grab_post_request",
-    "tests.grab_request",
-    "tests.grab_request_headers",
-    "tests.grab_user_agent",
-    "tests.grab_cookies",
-    "tests.grab_url_processing",
-    "tests.grab_timeout",
-    # *** Refactor
-    "tests.grab_proxy",
-    "tests.grab_upload_file",
-    "tests.grab_limit_option",
-    "tests.grab_charset_issue",
-    "tests.grab_pickle",
-    "tests.proxy",
-    # *** Extensions
-    "tests.ext_text",
-    "tests.ext_rex",
-    "tests.ext_lxml",
-    "tests.ext_form",
-    "tests.ext_doc",
-    # *** util.module
-    "tests.util_log",
-    # *** grab.export
-    "tests.grab_error",
-    "tests.ext_pyquery",
-    # *** Other things
-    "tests.raw_server",
-    "tests.misc",
-    "tests.test_util_http",
+    # "tests.grab_charset",
+    # "tests.grab_redirect",
+    # "tests.grab_defusedxml",
+    # "tests.grab_document",
+    ## *** Network
+    # "tests.grab_get_request",
+    # "tests.grab_post_request",
+    # "tests.grab_request",
+    # "tests.grab_request_headers",
+    # "tests.grab_user_agent",
+    # "tests.grab_cookies",
+    # "tests.grab_url_processing",
+    # "tests.grab_timeout",
+    ## *** Refactor
+    # "tests.grab_proxy",
+    # "tests.grab_upload_file",
+    # "tests.grab_limit_option",
+    # "tests.grab_charset_issue",
+    # "tests.grab_pickle",
+    # "tests.proxy",
+    ## *** Extensions
+    # "tests.ext_text",
+    # "tests.ext_rex",
+    # "tests.ext_lxml",
+    # "tests.ext_form",
+    # "tests.ext_doc",
+    ## *** util.module
+    # "tests.util_log",
+    ## *** grab.export
+    # "tests.grab_error",
+    # "tests.ext_pyquery",
+    ## *** Other things
+    # "tests.raw_server",
+    # "tests.misc",
+    # "tests.test_util_http",
 )
 
 # ************
 # Spider Tests
 # ************
 
-SPIDER_TEST_LIST = (
-    "tests.spider_task",
-    "tests.spider",
-    "tests.spider_proxy",
-    "tests.spider_queue",
-    "tests.spider_misc",
-    "tests.spider_meta",
-    "tests.spider_error",
-    "tests.spider_stat",
-    "tests.spider_multiprocess",
-)
+SPIDER_TEST_LIST = [
+    # "tests.spider_task",
+    # "tests.spider",
+    # "tests.spider_proxy",
+    # "tests.spider_queue",
+    # "tests.spider_misc",
+    # "tests.spider_meta",
+    # "tests.spider_error",
+    # "tests.spider_stat",
+    # "tests.spider_multiprocess",
+]
 
 
 def setup_logging():
